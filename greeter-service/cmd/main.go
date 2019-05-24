@@ -5,7 +5,7 @@ import (
 	"log"
 
 	"github.com/micro/go-micro"
-	"github.com/silverspase/go-micro/proto"
+	"github.com/silverspase/hello-name-microservice/proto"
 )
 
 type Greeter struct{}
