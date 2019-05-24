@@ -27,4 +27,12 @@ If you pass name - you receive phrase with that name
 
 The answer should be `Hello, Alice`
 
+## What is under the hood
+
+With first command we started greeter-service with out business logic - it has rpc function which do simple work and do it well - gets name and returns the phrase.
+
+The second command spined up client service which listens port 8080 for requests and calls greeter-service rpc function
+
+By sending curl request we activate client chain of parsing body - for name param and conducting rpc call to greeter-service.
+
 
