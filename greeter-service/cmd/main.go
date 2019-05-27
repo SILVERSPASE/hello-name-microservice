@@ -4,6 +4,7 @@ import (
 	"context"
 	"log"
 
+	"github.com/micro/go-grpc"
 	"github.com/micro/go-micro"
 	"github.com/silverspase/hello-name-microservice/proto"
 )
@@ -17,7 +18,7 @@ func (g *Greeter) Hello(ctx context.Context, req *proto.HelloRequest, rsp *proto
 
 func main() {
 	// Create a new service. Optionally include some options here.
-	service := micro.NewService(micro.Name("proto"))
+	service := grpc.NewService(micro.Name("proto"))
 	// Init will parse the command line flags.
 	service.Init()
 	// Register handler

@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/micro/go-grpc"
 	"io"
 	"log"
 	"net/http"
@@ -14,7 +15,7 @@ import (
 
 func main() {
 	// Create a new service. Optionally include some options here.
-	service := micro.NewService(micro.Name("proto.client"))
+	service := grpc.NewService(micro.Name("proto.client"))
 	service.Init()
 	// Create new proto client
 	greeter := proto.NewGreeterService("proto", service.Client())
